@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form>
+        <input type="text" placeholder="Enter name" required>
+        <br><br>
+        <input type ="password" placeholder="Enter Password" required>
+        <br><br>
+        <button>submit</button>
+    </form>
+    <hr>
+    <h1>Sign Up Form</h1>
+    <fieldset>
+        <legend>
+            Personal Information
+        </legend>
+        <form>
+            <input type="text" placeholder="First Name" required size="28">
+            <input type="text" placeholder="Middle Name" size="28">
+            <input type="text" placeholder="Last Name" required size="28">
+            <br><br>
+            <input type="number" placeholder="Enter Age" required>
+            <br><br>
+            <label for="dob">Enter Date of Birth</label>
+            <input type="date" placeholder="Enter Date of Birth" id="dob">
+            <br><br>
+            <input type="number" placeholder="Enter Phone Number">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Skills and Qualification</legend>
+        <form>
+            <h3>Skills:</h3>
+            <br>
+            <input type="checkbox" id="chk1" value="html">
+            <label for="chk1">HTML</label>
+            <br><br>
+            <input type="checkbox" id="chk2" value="css">
+            <label for="chk2">CSS</label>
+            <br><br>
+            <input type="checkbox" id="chk3" value="js">
+            <label for="chk3">JavaScript</label>
+            <br><br>
+            <h3>Qualification:</h3>
+            <br>
+            <input type="radio" name="r" value="BTech">BTech
+            <br><br>
+            <input type="radio" name="r" value="BE">BE
+        </form>
+    </fieldset>
+</body>
+</html>
