@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>'
+    <style>
+        *{
+            margin: 0px;
+        }
+        .parent{
+            display: flex;
+            background-color: silver;
+            justify-content: center;
+
+        }
+        .child{
+            background-color: pink;
+            margin: 20px;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            transition-property: transform;
+            transition-duration: 0.5s;
+            box-shadow: 2px 2px 2px 2px blue;
+            background: linear-gradient(rgb(139, 214, 231),rgb(244, 113, 150));
+        }
+        .child:hover{
+            transform: scale(1.2,1.2);
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <h2>Project 1</h2>
+            <a href="https://arradeepthi.github.io/online-store">Project 1 link</a>
+        </div>
+        <div class="child">
+            <h2>Project 2</h2>
+            <a href="#">Project 2 link</a>
+        </div>
+        <div class="child">
+            <h2>Project 3</h2>
+            <a href="#">Project 3 link</a></div>
+    </div>
+</body>
+</html>
