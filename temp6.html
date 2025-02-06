@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+            let a=Number(document.getElementById("num1").value);
+            let b=Number(document.getElementById("num2").value);
+            let str=`${a} + ${b} = ${a+b}<br>`;
+            str=str+`${a} - ${b} = ${a-b}<br>`;
+            str=str+`${a} x ${b} = ${a*b}<br>`;
+            str=str+`${a} / ${b} = ${a/b}<br>`;
+            res.innerHTML=str;
+        }
+        
+    </script>
+    <style>
+        .parent{
+            display: flex;
+            justify-content: center;
+            margin-top: 10vh;
+        }
+        .container{
+            border: 1px solid grey;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        input, button{
+            height: 40px;
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button{
+            width: 310px;
+            background-color: rgb(15, 15, 145);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+            <input type="number" id="num1" placeholder="Enter number 1"><br>
+            <input type="number" id="num2" placeholder="Enter number 2"><br>
+            <button onclick="calc()">Submit</button>
+            <hr>
+            <p><div id="res"></div></p>
+        </div>
+    </div>
+</body>
+</html>

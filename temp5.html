@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+            margin-top: 25vh;
+
+        }
+        .container{
+            display: flex;
+            border: 1px solid grey;
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center; 
+            height: 300px;
+            width: 600px;
+        }
+        input{
+            height: 50px;
+            width: 500px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        button{
+            height: 50px;
+            width: 515px;
+            border-radius: 5px;
+            font-size: 1em;
+            color: white;
+            background-color: rgb(31, 31, 177);
+        }
+        #msg{
+            font-size: 1.3em;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        
+
+    </style>
+    <script>
+        function f1(e){
+            e.preventDefault();
+            let uname=document.getElementById("name").value;
+            let pwd=document.getElementById("password").value; 
+            if(uname===""|| pwd==="")
+            {
+                msg.innerHTML="Please enter all the details";
+            }  
+            else if(uname!=="john@gmail.com"|| pwd!=="1234"){
+                msg.innerHTML="Access Denied";
+            }
+            else{
+                msg.innerHTML="Welcome John!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+            <form>
+                <p><div id="msg"></div></p>
+                <p><input type="text" id="name" placeholder="Email address or phone number" required></p>
+                <p><input type="password" id="password" placeholder="Password"></p>
+                <button onclick="f1(event)">Log in</button> 
+            </form>
+        </div>
+    </div>
+</body>
+</html>
