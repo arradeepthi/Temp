@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box{
+            margin: 10px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        let products = [
+          {
+            id: 1,
+            name: "Product 1",
+            cost: 20,
+            description: "This is product 1",
+            url: " https://picsum.photos/id/111/200/200",
+          },
+          {
+            id: 2,
+            name: "Product 2",
+            cost: 30,
+            description: "This is product 2",
+            url: "https://picsum.photos/id/222/200/200",
+          },
+          {
+            id: 3,
+            name: "Product 3",
+            cost: 55,
+            description: "This is product 3",
+            url: "https://picsum.photos/id/33/200/200",
+          },
+          {
+            id: 4,
+            name: "Product 4",
+            cost: 18,
+            description: "This is product 4",
+            url: "https://picsum.photos/id/24/200/200",
+          },
+          {
+            id: 5,
+            name: "Product 5",
+            cost: 90,
+            description: "This is product 5",
+            url: "https://picsum.photos/id/115/200/200",
+          },
+        ];
+        console.log(products[0]);
+        let len=products.length;
+        let str='<div class="container">';
+        console.log(len);
+        for (let i=0; i<len; i++)
+        {
+          str+=
+          `<div class="box">
+            <img src=${products[i].url}>
+            <h2>${products[i].name}</h2>
+            <p>${products[i].description}</p>
+            <p><b>Price: </b>${products[i].cost}</p>
+            <button>Add to Cart </button>
+            </div>`
+        }
+        str+='</div>';
+        root.innerHTML=str;
+      </script>
+  </body>
+</html>
