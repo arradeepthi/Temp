@@ -8,19 +8,20 @@
         function mul(e){
             e.preventDefault();
             let num=Number(document.getElementById("num").value);
+            str="";
             for(let i=1; i<11; i++)
             {
                 let a=i*num;
-                res.innerHTML+= `<br>${num} x ${i} = ${a}`;
+                str+= `<br>${num} x ${i} = ${a}`;
             }
-            // res.innerHTML=str;
+            res.innerHTML=str;
         }
     </script>
 </head>
 <body>
     <h1>Multiplication Table</h1>
     <form>
-        <input type="number" id="num" placeholder="Enter Number">
+        <input type="number" id="num" placeholder="Enter Number" onchange="mul(event)">
         <br>
         <button onclick="mul(event)">Submit</button>
         <hr>
