@@ -18,13 +18,18 @@
             console.log(value);
         });
         const num=[12,23,45,10]
+        //map gives exact elements in new array with or without modification
         const newArr=num.map(value => {
             return value+5
         })
         console.log(newArr)
         const newr=num.map(value => value +5);
         console.log(newr)
-
+        //filter gives exact elements in new array with a modification/filter. It cannot modify element.
+        const gt10=num.filter((value)=>value>10);
+        console.log(gt10);
+        const f10=num.find((value)=>value>10);
+        console.log(f10);
     </script>
 </head>
 <body>
