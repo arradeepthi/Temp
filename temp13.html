@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const products = ["apple","orange","mango"];
+        for(let i of products)
+        {
+        console.log(i);
+        }
+        for(let i in products)
+        {
+            console.log(Number(i)+1+" : "+products[i]);
+        }
+        products.forEach((value,index,arr) => {
+            console.log(value);
+        });
+        const num=[12,23,45,10]
+        const newArr=num.map(value => {
+            return value+5
+        })
+        console.log(newArr)
+        const newr=num.map(value => value +5);
+        console.log(newr)
+
+    </script>
+</head>
+<body>
+</body>
+</html>
