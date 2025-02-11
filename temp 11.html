@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users=[];
+        function showForm(){
+            
+    root.innerHTML=`<h1>New User Signup Form</h1>
+    <form>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <br>
+        <input type="password" id="pwd" placeholder="Enter password">
+        <br>
+        <input type="date" id="dob" placeholder="Enter your dob">
+        <br>
+        <button onclick="addData(event)">Register</button>
+        <div id="msg"></div>
+        </form> `
+
+        }
+        function showUsers()
+        {
+            
+            let len=users.length;
+            let str="";
+            for(let i=0; i<len; i++)
+            {
+                   str+=`<pre><div>${users[i].name}\t${users[i].email}\t${users[i].pwd}\t${users[i].dob}\t<button onclick="deleteUser(${i})">Delete</button></pre>`
+            }
+            msg.innerHTML=str;
+        }
+        function deleteUser(index){
+            users.splice(index,1);
+            showUsers();
+
+        }
+        function addData(e){
+            e.preventDefault();
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let pwd=document.getElementById("pwd").value;
+            let dob=document.getElementById("dob").value;
+            let user={
+                name: name,
+                email: email,
+                pwd: pwd,
+                dob: dob
+            }
+            users.push(user);
+            showUsers();
+        }
+    </script>
+</head>
+<body onload="showForm()">
+    <div id="root"></div>
+</body>
+</html>
