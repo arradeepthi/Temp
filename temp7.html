@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .c{
+            background-color: yellow;
+        }
+            
+    </style>
     <script>
         function showData(e){
-            e.preventDefault();
-            let name=document.getElementById("name").value;
+            /* e.preventDefault();
+            let name=document.querySelector(".c").value;
+            let name=document.getElementByClassName("c").value;
             let email=document.getElementById("email").value;
             let pwd=document.getElementById("pwd").value;
-            let dob=document.getElementById("dob").value;
-            msg.innerHTML= `${name}, ${email}, ${pwd}, ${dob}`;
+            let dob=document.getElementById("dob").value; */
+            let email=document.querySelectorAll("input").value;
+            console.log(email[1]);
+            let email2=document.getElementsByTagName("input");
+
+            /* msg.innerHTML= `${name}, ${email}, ${pwd}, ${dob}`; */
+
         }
 
     </script>
@@ -19,7 +31,7 @@
 <body>
     <h1>New User Signup Form</h1>
     <form>
-        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" class="c" id="name" placeholder="Enter your name">
         <br>
         <input type="email" id="email" placeholder="Enter your email">
         <br>
@@ -29,6 +41,7 @@
         <br>
         <button onclick="showData(event)">Register</button>
         <p><div id="msg"></div></p>
+        
     </form>
 </body>
 </html>

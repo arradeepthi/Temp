@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num=Math.floor(Math.random()*100)+1;
+        let n=prompt("Guess the number: ");
+        let count=0;
+        while(n!=null && num!=Number(n)){
+            let guess=Number(n);
+            if(guess==null){
+                alert("Enter number!!");
+            }
+            if(isNaN(guess))
+            {
+                alert("Enter valid number!!!!");
+            }
+            else if(guess>num)
+            {
+                alert("The number is smaller than what you've guessed!!!");
+            }
+            else if(guess<num)
+            {
+                alert("The number is greater than what you've guessed!!!");
+            }
+            count++;
+            n=prompt("Guess again!");
+        }
+        if(n!=null){
+        let score=Math.max(100-count, 0);
+        alert(`You have guessed correctly. Your score is ${score}`);
+        }
+        else{
+            alert("Game cancelled!!!!");
+        }
+        window.console.log("Hello World");
+        
+        
+
+    </script>
+</head>
+<body>
+</body>
+</html>
